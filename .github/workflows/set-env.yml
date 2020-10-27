@@ -14,5 +14,5 @@ jobs:
     - name: Use variable
       run: echo ${{ env.deploying_build }}
     - name: conditional step using variable
-      if: ${{ env.deploying_build }}
+      if: ${{ env.deploying_build == 'true' }}
       run: echo "condition met"
